@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="shortcut icon" href="icon/Ark_ico.ico">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivero móvil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a class="navbar-brand navbar-logo text-light" href="#" onclick="cargarContenido('inicio.html')"><img src="logo/Vivero movil.png" alt=""></a>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Plantas -->
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#" onclick="cargarContenido('inicio.html')">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Plantas
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#" onclick="cargarContenido('plantas.html')">Plantas</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="cargarContenido('cuidado.html')">Cuidado</a></li>
+                        </ul>
+                    </li>
+                    <!-- Fin Plantas -->
+                    <!-- Recorrido -->
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#" role="button" aria-expanded="false">
+                            Donde vamos
+                        </a>
+                    </li>
+                    <!-- Fin Recorrido -->
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#" onclick="cargarContenido('sugerencias.html')">Sugerencia</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container-fluid contenido">
+            <!-- Aquí se cargará el contenido dinámicamente -->
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script>
+        // Cargar contenido inicial
+        cargarContenido('inicio.html');
+
+        // Función para cargar contenido dinámicamente
+        function cargarContenido(url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    document.querySelector('.contenido').innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Error al cargar el contenido:', error);
+                });
+        }
+    </script>
+    <footer>
+        <p>&copy; 2023 Mi Página Web. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+

@@ -1,8 +1,15 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #00B894;
+    background-image: url('/fondo/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
 }
 
 header {
@@ -12,11 +19,12 @@ header {
     text-align: center;
 }
 
-nav {
+.navbar {
     background-color: #CCCCCC;
-    position: fixed;
-    color: red;
     padding: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav ul {
@@ -29,23 +37,23 @@ nav ul {
 nav ul li {
     display: inline-block;
     margin-right: 10px;
-    
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     padding: 5px 10px;
+    outline: none;
+}
+
+.dropdown-item:visited {
+    color: inherit;
+    background-color: #CCCCCC;
 }
 
 section {
     padding: 20px;
 }
-
-
-
-
-
 
 footer {
     background-color: #8B4513;
@@ -56,4 +64,23 @@ footer {
     bottom: 0;
     width: 100%;
     height: 60px;
+}
+
+.dropdown-menu,
+.dropdown-item {
+    background-color: #CCCCCC;
+}
+
+
+.container {
+    background-color: rgba(204, 204, 204, 0.6);
+}
+.carousel-inner{
+    height: 80%;
+    width: 80%;
+    margin: auto;
+}
+.img-inicio{
+    width: 100px; /* Ancho deseado */
+    height: 600px; /* Altura deseada */
 }

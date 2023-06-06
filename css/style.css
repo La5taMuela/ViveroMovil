@@ -2,18 +2,20 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #00B894;
 }
 
 header {
-    background-color: #333;
+    background-color: #006400;
     color: #fff;
     padding: 20px;
     text-align: center;
 }
 
 nav {
-    background-color: #555;
-    color: #fff;
+    background-color: #CCCCCC;
+    position: fixed;
+    color: red;
     padding: 5px;
 }
 
@@ -21,11 +23,13 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 nav ul li {
     display: inline-block;
     margin-right: 10px;
+    
 }
 
 nav ul li a {
@@ -38,9 +42,18 @@ section {
     padding: 20px;
 }
 
+
+
+
+
+
 footer {
-    background-color: #333;
+    background-color: #8B4513;
     color: #fff;
     padding: 20px;
     text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
 }

@@ -12,6 +12,7 @@
     <title>ViveroMóvil</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
     <header>
@@ -28,28 +29,26 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <!-- Plantas -->
                     <li class="nav-item">
-                        <a class="nav-link text-black" href="#" onclick="cargarContenido('inicio.html')">Inicio</a>
+                        <a class="nav-link text-black" href="#inicio" onclick="cargarContenido('inicio.html')">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-black dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link text-black dropdown-toggle" href="#plantas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Plantas
                         </a>
                         <ul class="dropdown-menu dropdown-menu-light text-black">
-                            <li><a class="dropdown-item" href="#" onclick="cargarContenido('plantas.html')">Plantas</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="cargarContenido('cuidado.html')">Cuidado</a></li>
+                            <li><a class="dropdown-item" href="#plantas" onclick="cargarContenido('plantas.html')">Plantas</a></li>
+                            <li><a class="dropdown-item" href="#cuidado" onclick="cargarContenido('cuidado.html')">Cuidado</a></li>
                         </ul>
                     </li>
-                    <!-- Fin Plantas -->
-                    <!-- Recorrido -->
                     <li class="nav-item">
-                        <a class="nav-link text-black" href="#" onclick="cargarContenido('dondeVamos.html')">
+                        <a class="nav-link text-black" href="#dondeVamos" onclick="cargarContenido('dondeVamos.html')">
                             Donde vamos
                         </a>
                     </li>
-                    <!-- Fin Recorrido -->
                     <li class="nav-item">
-                        <a class="nav-link text-black" href="#" onclick="cargarContenido('sugerencias.html')">Sugerencia</a>
+                        <a class="nav-link text-black" href="#sugerencias" onclick="cargarContenido('sugerencias.html')">Sugerencia</a>
                     </li>
+                    
                 </ul>
             </div>
         </div>
@@ -60,22 +59,6 @@
             <!-- Aquí se cargará el contenido dinámicamente -->
         </div>
     </section>
-    <script>
-        // Cargar contenido inicial
-        cargarContenido('inicio.html');
-
-        // Función para cargar contenido dinámicamente
-        function cargarContenido(url) {
-            fetch(url)
-                .then(response => response.text())
-                .then(html => {
-                    document.querySelector('.contenido').innerHTML = html;
-                })
-                .catch(error => {
-                    console.error('Error al cargar el contenido:', error);
-                });
-        }
-    </script>
     <footer class="site-footer">
         <div class="container-footer">
         <div class="row">
@@ -88,11 +71,11 @@
             <div class="col-xs-6 col-md-4">
             <h6>Quick Links</h6>
             <ul class="footer-links">
-                <li><a href="http://scanfcode.com/about/">About Us</a></li>
-                <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-                <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-                <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-                <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Contribute</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Sitemap</a></li>
             </ul>
             </div>
         </div>
@@ -120,6 +103,8 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="js/contenido.js"></script>
+<script src="js/smooth-scroll.js"></script>
 </body>
 </html>
 

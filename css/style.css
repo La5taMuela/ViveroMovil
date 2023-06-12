@@ -14,7 +14,9 @@ body {
 
     overflow-x: hidden;
 }
-
+.contenido{
+    overflow-y: scroll;
+}
 
 header {
     background-color: #006400;
@@ -116,7 +118,14 @@ section {
 }
 /* Fin Construccion */
 
+.video{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
 
+}
 .site-footer {
     background-color: #8B4513;
     color: #96a2b2;
